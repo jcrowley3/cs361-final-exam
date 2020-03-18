@@ -2,6 +2,8 @@ require_relative 'tail_pack'
 
 class BmxBike
 
+  attr_reader :daily_rate
+
   def initialize
     @tail_pack = TailPack.new
     @weekly_price = 70

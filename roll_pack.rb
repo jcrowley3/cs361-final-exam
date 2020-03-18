@@ -6,5 +6,5 @@ class RollPack
   # Get price
   def price
   @price # Price set in initializer
-  end
+  end 
 end

@@ -1,11 +1,9 @@
 class TailPack
 
-def initialize
-  @cost = 2 # Flat rate per rental
-end
+  attr_reader :cost
 
-def cost
-  @cost
-end
+  def initialize
+    @cost = 2 # Flat rate per rental
+  end
 
 end
