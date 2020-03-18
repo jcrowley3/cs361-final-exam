@@ -1,10 +1,11 @@
 require_relative 'tail_pack'
 
-class BmxBike
+class BmxBike < AbstractBike
 
-  attr_reader :daily_rate, :tail_pack, :weekly_rate, :hourly_rate
+  attr_reader :weekly_rate, :daily_rate, :hourly_rate,
 
-  def initialize
+  def initialize(rate)
+    @rate = rate
     @tail_pack = TailPack.new
     @weekly_price = 70
     @daily_price = 20
@@ -18,5 +19,29 @@ class BmxBike
   def adjust
     puts "Adjusting seat..."
   end
+
+  def weekly_price
+    weekly_rate + tail_pack
+  end
+
+  def daily_price
+    daily_rate + tail_pack
+  end
+
+  def weekly_price
+    hourly_rate + tail_pack
+  end
+
+
+  def rate
+    if rate = weekly_rate
+      rate.weekly_price
+    elsif rate = daily_rate
+      rate.daily_price
+    elsif rate = hourly_rate
+      rate.hourly_price
+  end
+
+
 
 end
