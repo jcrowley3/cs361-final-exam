@@ -14,4 +14,4 @@ class AbstractBike
     rate
   end
 
-end
+end 
