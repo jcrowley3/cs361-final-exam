@@ -1,7 +1,5 @@
-# As a customer,
-# I want to estimate the cost of renting four bikes
-#   for a week
-# So that I know how much money I will need to pay
+# estimating the cost of renting four bikes
+# for a week
 
 require_relative 'bmx_bike'
 require_relative 'road_bike'
@@ -21,7 +19,7 @@ total_price = 0
 total_price += bikes[0].weekly_rate
 total_price += bikes[0].tail_pack.cost
 
-total_price += bikes[1].daily_rate * 7
+total_price += bikes[1].weekly_rate
 total_price += bikes[1].panniers[0].price
 total_price += bikes[1].panniers[1].price
 

@@ -14,7 +14,7 @@ class RoadBike
     puts "Cleaning..."
   end
 
-  def lubricate_gears
+  def lubricate
     puts "Lubricating gears..."
   end
 
